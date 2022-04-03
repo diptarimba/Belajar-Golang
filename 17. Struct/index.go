@@ -58,4 +58,12 @@ func main() {
 		fmt.Println(v.name, " => ", v.grade)
 	}
 
+	var maba struct{
+		student
+	}
+
+	maba.age = 12
+	maba.name = "zuzu"
+	maba.grade = 3
+	fmt.Println(maba)
 }
