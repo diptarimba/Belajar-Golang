@@ -5,6 +5,8 @@ import (
 	"strings"
 )
 
+type FilterCallback func(string) bool
+
 func main() {
 	var data = []string{"dipta", "jono", "kuni", "kono", "kano", "paino"}
 
@@ -20,7 +22,8 @@ func main() {
 	fmt.Printf("Yang hurufnya 4 adalah %v", theteg)
 }
 
-func filter(data []string, callback func(string) bool) []string {
+// func filter(data []string, callback func(string) bool) []string {
+func filter(data []string, callback FilterCallback) []string {
 	var result []string
 	for _, each := range data {
 		if filtered := callback(each); filtered {
