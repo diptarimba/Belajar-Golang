@@ -46,6 +46,16 @@ func main() {
 	orangbaru.rumah = "Jkt"
 	orangbaru.age = 30
 
-	fmt.Println("Coba ah ", orangbaru.name)
+	// fmt.Println("Coba ah ", orangbaru.name)
+
+	var varbaru = []student{
+		{name: "Digi", grade: 3},
+		{name: "Dugu", grade: 4},
+		{name: "Dudi", grade: 5},
+	}
+	
+	for _,v := range varbaru {
+		fmt.Println(v.name, " => ", v.grade)
+	}
 
 }
